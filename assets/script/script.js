@@ -2,13 +2,9 @@
 var dateHeading = $('#currentDay');
 var todayIs = moment().format('LLLL');
 dateHeading.text(todayIs);
-
 // Text description area
 var allTextarea = $('.description');
-
 var currentHour = moment().format('H');
-
-// var currentHour = moment().set('hour' ,10);
 var hourBlock = $('time');
 
 var btn9 = $('#btn1');
@@ -21,6 +17,9 @@ var btn3 = $('#btn7');
 var btn4 = $('#btn8');
 var btn5 = $('#btn9');
 // Text area color changing 
+
+// check value of time block against current time and add class 
+// accordingly
 var text9 = $('#text9am');
 var text10 = $('#text10am');
 var text11 = $('#text11am');
@@ -48,7 +47,7 @@ checkTime(15, text3)
 checkTime(16, text4)
 checkTime(17, text5)
 
-
+// saves content of clicked buttons matching text area to local storage
 $('.btn').on('click', function(event){
     var targetButton =event.target;
     var savedContent = $(this).siblings('textarea').val()
@@ -59,7 +58,7 @@ $('.btn').on('click', function(event){
         localStorage.setItem(targetButton.id, savedContent)
     }
 })
-
+// fetch all stored items and put them into the text fields
 function refreshItems(){
     console.log(localStorage.getItem('btn1'))
     text9.text(localStorage.getItem('btn1'))
