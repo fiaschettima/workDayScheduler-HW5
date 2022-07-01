@@ -50,13 +50,26 @@ checkTime(17, text5)
 
 
 $('.btn').on('click', function(event){
-    // event.stopPropagation();
     var targetButton =event.target;
     var savedContent = $(this).siblings('textarea').val()
-    console.log(targetButton);
-    localStorage.setItem(targetButton.id, savedContent)
+    if(savedContent === ""){
+        console.log('empty')
+    }else{
+        console.log('text');
+        localStorage.setItem(targetButton.id, savedContent)
+    }
 })
 
-function initializeTasks(){
-
+function refreshItems(){
+    console.log(localStorage.getItem('btn1'))
+    text9.text(localStorage.getItem('btn1'))
+    text10.text(localStorage.getItem('btn2'))
+    text11.text(localStorage.getItem('btn3'))
+    text12.text(localStorage.getItem('btn4'))
+    text1.text(localStorage.getItem('btn5'))
+    text2.text(localStorage.getItem('btn6'))
+    text3.text(localStorage.getItem('btn7'))
+    text4.text(localStorage.getItem('btn8'))
+    text5.text(localStorage.getItem('btn9'))
 }
+refreshItems();
