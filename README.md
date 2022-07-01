@@ -3,11 +3,15 @@
 
 [Link to the Live webpage](https://fiaschettima.github.io/workDayScheduler-HW5/)
 
+
+
 ## Description
 
-This project is a simple day planer for your typical 9-5 workday.
+This project is a simple day planer for your typical 9-5 workday. It will Highlight times of day (past,present and future) based off of the current time. The program will also allow you to save the information you entered to local storage, this way you can close the page and refresh and the information will stay in its palce.
+This is all green because it is midnight so everything is future from midnight which is 0
 
 ![gif of page functioning](./assets/Images/workingGif.gif)
+
 
 ---
 
@@ -26,8 +30,8 @@ Here's a few quick links:
 ## Installation
 
 To download the raw code of the page follow the steps below:
-1. In the [coding quiz](https://github.com/fiaschettima/codingQuiz) Repository copy the Code               
-2. Open your version of terminal and enter > git clone git@github.com:fiaschettima/SimpleJS-Password_Gen (Just paste the code you copied from previous step)
+1. In the [Work Day Scheduler](https://github.com/fiaschettima/workDayScheduler-HW5) Repository copy the Code               
+2. Open your version of terminal and enter > git clone git@github.com:fiaschettima/workDayScheduler-HW5 (Just paste the code you copied from previous step)
 3. After that the code is now on your local machine and you are free to copy it to your own repository and make changes
  ![Ex.S](./assets/images/codeCopy.png)
 
@@ -38,34 +42,34 @@ To download the raw code of the page follow the steps below:
 
 
 ## Code Snippets
-![Code Ex](./assets/images/codeSnippet.png)
+![Code Ex](./assets/Images/codeSnip.png)
 
-This section of code is listenting for user input anywhere on the container that holds the quiz buttons. Then checks if what you clicked is a button and if it is then increase score, update score on the HTML, removes the question you were on and then generates the next question.
+This section of code adds an event listener to every button with class of btn on the page. It will then save the id of the button as the key to local storage. With the accompanying textarea information as the value to be pulled out later.
 
 ---
 ## Usage 
 
-Test your knowledge or make your own quiz questions to change the difficulty up.
+Track daily tasks keeping up with hourly progression.
 
 ---
 
 ## Technology Used
-    -JavaScript
+    -JQUERY
     -HTML
     -CSS
+    -BootStrap
 ---
 ## Learning Points
-    This project offered a chance to learn and gain a better understanding of JS functions and event listeners as well as using local storage.
+    This project allowed me to get used to using local storage as well as using moment.js
 ---
 ## Problems faced
-During the project my only issue I was un able to resolve was pulling the highscores and show new unique scores for each attempt.
-I do believe I did what was required but it's not in a real applicable state for use outside of this assignment.
+During the project I struggled in figuring out how to get the colors of the time areas to change based off of the current time. The result I used is not nearly what I had initially thought of. and I do believe there is a more efficent method.
 
 ---
 ## Credits
 
 - [W3 Scools](https://www.w3schools.com/)
-- [Colors](https://coolors.co/)
+- [MarkDown Guide](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ---
 ## License
